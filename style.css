@@ -1,0 +1,158 @@
+/* for styling all the elements in the html*/
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* For font of the body */
+body
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* To change the color of the top area of the page horizontally */
+nav
+{
+    background: #3b3b3b;
+    height: 80px;
+    width: 100%;
+}
+
+/* It is the logo of the website in the top left of the screen */
+label.logo
+{
+    color: gold;
+    font-size: 65px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+/* to place the options to the right */
+nav ul
+{
+    float: right;
+    margin-right: 20px;
+}
+
+/* to make the position of the option horizontal */
+nav ul li
+{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+/* to decorate the options and placing them not too far away from each other*/
+nav ul li a
+{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+/* When mouse hover over the menu, it will change color */
+a.active, a:hover
+{
+    background: #aaaaaa;
+    transition: .5s;
+}
+
+/* For positioning the 3 horizontal lines to the right and changing its color */
+.checkbutton
+{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* For hiding the checkbox */
+#check
+{
+    display: none;
+}
+
+/* When screen size is below a certain width, the page or a function will respond to its change */
+@media (max-width: 952px)
+{
+    label.logo
+    {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a
+    {
+        font-size: 16px;
+    }
+}
+
+/* When screen size is below a certain width, the page or a function will respond to it */
+@media (max-width: 858px)
+{
+    .checkbutton
+    {
+        display: block;
+    }
+
+    /* When screen of the page is really small, it will change color and fit the menu and other data to fit*/
+    ul
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #646464;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+
+        /* It will transition the page color in 0.5 seconds */
+        transition: all .5s;
+    }
+
+    /* When screen turn small, it will position the menu vertically*/
+    nav ul li
+    {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a 
+    {
+        font-size: 20px;
+    }
+    
+    /* The menu button will change color when it is hover */
+    a:hover, a.active
+    {
+        background: none;
+        color: #aaaaaa;
+    }
+
+    /* Its to animate the change of the menu from the left, when click the 3 horizontal lines*/
+    #check:checked ~ ul
+    {
+        left: 0;
+    }
+}
+
+/* For the background image */
+section
+{
+    background: url(abstract_pattern_design_background_2007.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ultimo</title>
+    <!-- for linking the html to the css file and also for importing the font -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        /* to decorate #contactinfo font, size and alignment to the middle */
+        #contactinfo
+        {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        /* to decorate the paragraph font, size and alignment to the middle */
+        p
+        {
+            margin: auto;
+            width: 50%;
+            padding: 5px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- this is for the menu bar -->
+    <nav>
+        <!-- When click the 3 horizontal lines, it will either tick or untick the check box -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbutton">
+            <!-- For adding the 3 horizontal line logo -->
+            <i class="fa fa-bars"></i>
+        </label>
+
+        <!-- For labeling or adding a logo to the top left of the screen -->
+        <label class="logo">Ultimo</label>
+
+        <!-- This the options in the menu and will take you to another page when click -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a class="active" href="#">Contact</a></li>
+            <li><a href="booking.html">Booking</a></li>
+        </ul>
+    </nav>
+
+    <!-- This is where the background picture is and the contact information -->
+    <section>
+        <h1 id="contactinfo">Contact Info:</h1>
+        <br>
+        <p>Phone Number: +62 361-738720 / 21</p>
+        <p>Email: bali@ultimorestaurant.com</p>
+    </section>
+</body>
+</html>

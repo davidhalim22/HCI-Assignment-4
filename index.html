@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ultimo</title>
+
+    <!-- for linking the html to the css file and also for importing the font -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* this will import a font */
+        @font-face
+        {
+            font-family: Sinera;
+            src: url(Sinera.woff);
+        }
+        /* this will adjust the position of the text and decorate the size,font and color */
+        h1 
+        {
+            font-family: Sinera;
+            font-size: 150px;
+            width: 50%;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* this will support the h1 to be position in the center of the page */
+        h2
+        {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            height: 32%;
+        }
+
+        /* when a page width is smaller than 870px, the h1 will change text size */
+        @media (max-width:870px)
+        {
+            h1
+            {
+                font-size: 100px;
+                transition: all .5s;
+            }
+        }
+
+        /* when a page width is bigger than 870px, the h1 will change text size */
+        @media (min-width:870px)
+        {
+            h1
+            {
+                font-size: 150px;
+                transition: all .5s;
+            }
+        }
+
+        /* when a page width is smaller than 600px, the h1 will change text size */
+        @media (max-width: 600px)
+        {
+            h1
+            {
+                font-size: 75px;
+                transition: all .5s;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- this is for the menu bar -->
+    <nav>
+        <!-- When click the 3 horizontal lines, it will either tick or untick the check box -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbutton">
+            <!-- For adding the 3 horizontal line logo -->
+            <i class="fa fa-bars"></i>
+        </label>
+
+        <!-- For labeling or adding a logo to the top left of the screen -->
+        <label class="logo">Ultimo</label>
+
+        <!-- This the options in the menu and will take you to another page when click -->
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Booking</a></li>
+        </ul>
+    </nav>
+
+    <!-- This is where the background picture is and the h1 -->
+    <section>
+        <h2></h2>
+        <h1>WELCOME</h1>
+    </section>
+</body>
+</html>

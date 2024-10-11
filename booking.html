@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ultimo</title>
+    <!-- for linking the html to the css file and also for importing the font -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        /* this will decorate the form */
+        form
+        {
+            margin: auto;
+            width: 50%;
+            padding: 5px;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        /* this will decorate the first heading */
+        h1
+        {
+            margin: auto;
+            width: 50%;
+            padding: 5px;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        /* this will provide support for the first heading to be in the center of page */
+        h2
+        {
+            margin: auto;
+            width: 50%;
+            padding: 5px;
+            text-align: center;
+            height: 12%;
+        }
+
+        /* This will decorate the reset button */
+        #reset
+        {
+            margin-left: 5%;
+            margin-right: auto;
+            color: black;
+            font-size: 20px;
+        }
+
+        /* This will decorate the submit button */
+        #submit
+        {
+            margin-left: auto;
+            margin-right: auto;
+            color: black;
+            font-size: 20px;
+        }
+
+        /* This will change the color of the text in the form to black */
+        #date-time
+        {
+            color: black;
+        }
+
+        /* This will display a border and will change the background color in the box to gray */
+        fieldset
+        {
+            display: block;
+            border: 2px solid;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <!-- this is for the menu bar -->
+    <nav>
+        <!-- When click the 3 horizontal lines, it will either tick or untick the check box -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbutton">
+            <!-- For adding the 3 horizontal line logo -->
+            <i class="fa fa-bars"></i>
+        </label>
+
+        <!-- For labeling or adding a logo to the top left of the screen -->
+        <label class="logo">Ultimo</label>
+
+        <!-- This the options in the menu and will take you to another page when click -->
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="#">Booking</a></li>
+        </ul>
+    </nav>
+
+    <!-- This is where the background picture is and the h1 -->
+    <section>
+        <h2></h2>
+        <h1>Reservation Form: </h1>
+
+        <!--The form will take the user to "action_page.php" after filling all of the input and clicking the Submit button-->
+        <form action="action_page.php">
+
+            <!-- This is to keep the form inside the box -->
+            <fieldset>
+
+                <!--Labels will be put right next to the input and there will be different types of input-->
+                <div class="labelrow">
+                <label for="fullname">Full Name:</label>
+                </div>
+                <div class="inputrow">
+                    <input type="text" name="fullname" placeholder="Full Name">
+                </div>
+                <br>
+                <div class="labelrow">            
+                    <label for="email">Email Address:</label>
+                </div>
+                <div class="inputow">
+                    <input type="text" name="email" placeholder="Email Address">
+                </div>
+                <br>
+                <div class="labelrow">
+                <label for="date">Date/Time of Reservation:</label>
+                </div>
+                <div class="inputrow">
+                    <input type="datetime-local" name="date" id="date-time">
+                </div>
+                <br>
+                <div class="labelrow">
+                    <label for="phone">Phone Number:</label>
+                </div>
+                <div class="inputrow">
+                    <input type="number" name="phone" placeholder="Phone Number">
+                </div>
+                <br>
+                <input type="submit" id="submit"><input type="reset" id="reset">
+                <br>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
